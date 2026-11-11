@@ -1,0 +1,76 @@
+:root { color-scheme: dark; }
+
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("fonts/PressStart2P-Regular.ttf") format("truetype"); /* OFL, see fonts/OFL.txt */
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #000;
+  color: #eaeaea;
+}
+
+#app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#clock {
+  flex: none;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: pre;
+  font-family: Menlo, "SF Mono", Consolas, monospace;
+  font-size: 36px;
+  line-height: 1.1;
+}
+
+#clock.alarm { color: #ff3b30; }
+
+#bar {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+/* same look as the popup buttons: small, dark, thin border */
+.ctl {
+  background: #1a1a1a;
+  color: #eaeaea;
+  border: 1px solid #333;
+  padding: 4px 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  cursor: pointer;
+}
+.ctl:hover { border-color: #666; }
+.ctl:disabled { opacity: 0.4; cursor: default; }
+
+#float { padding: 6px 10px; }
+.pixel {
+  font-family: "Press Start 2P", monospace;
+  font-size: 10px;
+  letter-spacing: 0;
+}
+
+#note {
+  display: none;
+  margin: 0;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #6a6a6a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+}
+body.floating #note { display: flex; }
+body.floating #app { display: none; }

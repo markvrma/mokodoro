@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>mokodoro</title>
+  <link rel="stylesheet" href="timer.css">
+</head>
+<body>
+  <div id="app">
+    <pre id="clock"></pre>
+    <div id="bar">
+      <button id="float" class="ctl pixel" title="float above all windows">float</button>
+      <button id="pause" class="ctl" title="space">||</button>
+      <button id="mute" class="ctl" title="m">vol</button>
+      <button id="snd" class="ctl" title="s">&gt;&gt;</button>
+    </div>
+  </div>
+  <p id="note">floating. esc in the float window docks it back.</p>
+  <audio id="tick" loop></audio>
+  <script type="module" src="timer.js"></script>
+</body>
+</html>
